@@ -20,9 +20,11 @@ bool isPal(string s){
       for(int i=0;i<s.size();i++){
           word+=s[i];
           if(isPal(word)){
-            //   temp+=word;
-              solve(s.substr(i+1),ans,temp+word+' ');
-            //   temp=temp
+              word+=' ';
+            //recursive call
+              solve(s.substr(i+1),ans,temp+word);
+            //backtracking
+              word=word.substr(0,word.size()-1);
           }
       }
       return;
