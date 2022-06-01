@@ -1,6 +1,6 @@
 
 bool solve(vector<vector<int>> &ans,int n,int m,int x,int y,int step){
-    if(step == (n*m)) {ans[x][y] == step;return true;}
+    if(step == (n*m)) {ans[x][y] = step;return true;}
     int nx,ny;bool flag=true;
     int dx[4] = {-2,-1,1,2};
     for(int i=0;i<4;i++){
